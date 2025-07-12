@@ -39,7 +39,7 @@ function checkAns(idx){
         h2.innerHTML = `Game Over! Your score was <b>${level}<b> Press any key to play again.`
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(() => {
-            document.querySelector("body").style.backgroundColor = "white";
+            document.querySelector("body").style.backgroundColor = "rgb(239, 255, 255)";
         }, 100);
         reset();
     }
