@@ -1,11 +1,13 @@
 let gameseq = [];
 let userseq = [];
+let highestscore = [];
 let btncolors = ["yellow","red","blue","green"];
 
 let started = false;
 let level = 0;
 
 let h2 = document.querySelector("h2");
+let highestscr = document.querySelector(".Highestscr");
 
 document.addEventListener("keypress" , function(){
     if(started == false){
@@ -41,6 +43,8 @@ function checkAns(idx){
         setTimeout(() => {
             document.querySelector("body").style.backgroundColor = "rgb(239, 255, 255)";
         }, 100);
+        highestscore.push(level);
+        highestscr.innerText = `Highest Score: ${Math.max(...highestscore)}`
         reset();
     }
 }
