@@ -12,9 +12,9 @@ let highestscr = document.querySelector(".Highestscr");
 document.addEventListener("keypress" , function(){
     if(started == false){
         started = true;
+        levelup();
     }
 
-    levelup();
 });
 
 function gameflash(btn){
